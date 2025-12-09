@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+<style>
+    body{
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSzUqYHemIG58kTXoRprWlEjKlzbYuUk0NKQ&s");
+        background-size:50vw 100vh
+    }
+    #game{
+        width:50vw;
+        height:100vh;
+        background-color:black;
+    }
+    #input{
+        position:relative;
+        width:100%;
+        top:90%
+    }
+</style>
+</head>
+<body>
+<div id="game">
+<input id="input">
+</div>
+</body>
+<script src="Monster.js"></script>
+<script src="MonsterTextSystem.js"></script>
+<script>
+    var inputTXT = document.getElementById('input')
+    document.addEventListener("keypress", ()=> {
+        if(event.key == "Enter"){
+            inputConversion()
+            inputTXT.value = ''
+        }
+    })
+</script>

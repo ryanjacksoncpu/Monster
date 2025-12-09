@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<input id="inputspot">
+<h2 id="typewriter"></h2>
+</body>
+<script>
+    var inputTXT = document.getElementById("inputspot")
+    var typewriter = document.getElementById("typewriter")
+    var inputvalue = inputTXT.value
+    document.addEventListener("keypress" , () =>{
+        inputvalue = inputTXT.value
+if(event.key == "Enter"){
+    if(inputTXT.value == 'walk south'){
+        alert("LETS FREAKING GOOOOO")
+    }
+    typewriter.innerHTML = ''
+    typing()
+}})
+    let i = 0
+    function typing(){
+        if(i < inputTXT.value.length){
+        typewriter.innerHTML += inputTXT.value[i];
+        i++
+    setTimeout(typing,10)
+}else if(i == inputTXT.value.length || i > inputTXT.value.length){
+    i = 0
+    inputTXT.value = ''
+}
+
+    }
+</script>
+</html>
